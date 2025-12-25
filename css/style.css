@@ -361,8 +361,49 @@ footer p {
 
 /* 响应式调整 */
 @media (max-width: 768px) {
+    /* 基础容器优化 */
+    body {
+        padding-top: 10px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Header优化 */
+    header {
+        padding: 25px 15px;
+        border-radius: 0;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        word-break: keep-all;
+    }
+    
+    .logo .logo-text {
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+    
+    /* 主内容区域 */
     .main-content {
         flex-direction: column;
+        border-radius: 0;
     }
     
     .sidebar {
@@ -370,47 +411,51 @@ footer p {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #eaeaea;
+        padding: 20px 15px;
     }
     
-            header {
-                padding: 25px 15px;
-            }
-            
-            .logo {
-                flex-direction: column;
-                gap: 8px;
-                margin-bottom: 15px;
-            }
-            
-            .logo h1 {
-                font-size: 1.8rem;
-                letter-spacing: 0.5px;
-                word-break: keep-all;
-            }
-            
-            .logo .logo-text {
-                font-size: 1.2rem;
-                display: block;
-                width: 100%;
-            }
-            
-            header p {
-                font-size: 0.9rem;
-                padding: 0 10px;
-                line-height: 1.5;
-            }
+    .nav-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .nav-list a {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
     
     .content {
-        padding: 20px;
+        padding: 20px 15px;
     }
     
+    /* 章节标题优化 */
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+    
+    section {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+    }
+    
+    /* 段落文字优化 */
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    /* 图片布局优化 */
     .image-gallery {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .image-gallery-vertical {
         max-width: 100%;
         gap: 20px;
+        padding: 0;
     }
     
     .image-item:not(.image-item-vertical) img {
@@ -421,29 +466,178 @@ footer p {
     }
     
     .image-item-vertical img {
-        /* 移除max-height限制，让竖向图片完整显示 */
         max-height: none;
         width: 100%;
         height: auto;
     }
     
-    .image-gallery-vertical {
-        max-width: 100%;
-        padding: 0 10px;
+    .image-caption {
+        padding: 12px;
     }
     
-    .specs-table th, .specs-table td {
-        padding: 10px 8px;
-        font-size: 0.9rem;
+    .image-caption h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    
+    .image-caption p {
+        font-size: 0.85rem;
+    }
+    
+    /* 操作步骤优化 */
+    .steps {
+        margin: 20px 0;
     }
     
     .step {
         flex-direction: column;
+        padding: 15px;
+        margin-bottom: 20px;
     }
     
     .step-number {
         margin-right: 0;
+        margin-bottom: 12px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+    
+    .step-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* 表格优化 */
+    .specs-table {
+        font-size: 0.9rem;
+        margin: 15px 0;
+    }
+    
+    .specs-table th, .specs-table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .specs-table th {
+        width: 30%;
+        font-size: 0.9rem;
+    }
+    
+    /* 功能卡片优化 */
+    .feature-card {
+        padding: 20px;
         margin-bottom: 15px;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* 按钮优化 */
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+    
+    /* 页脚优化 */
+    footer {
+        padding: 25px 15px;
+        border-radius: 0;
+        margin-top: 30px;
+    }
+    
+    footer p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    /* 列表优化 */
+    ul, ol {
+        padding-left: 20px;
+    }
+    
+    li {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+    
+    /* 内联样式容器优化 */
+    h3 {
+        font-size: 1.2rem;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+}
+
+/* 超小屏幕优化（手机竖屏） */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    header {
+        padding: 20px 10px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo .logo-text {
+        font-size: 1rem;
+    }
+    
+    header p {
+        font-size: 0.85rem;
+    }
+    
+    .content {
+        padding: 15px 10px;
+    }
+    
+    .sidebar {
+        padding: 15px 10px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .image-gallery-vertical {
+        gap: 15px;
+    }
+    
+    .step {
+        padding: 12px;
+    }
+    
+    .feature-card {
+        padding: 15px;
+    }
+    
+    .specs-table th, .specs-table td {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+    }
+    
+    .specs-table th {
+        width: 35%;
     }
 }
 
